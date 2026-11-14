@@ -1,0 +1,22 @@
+{
+  "name": "matty-countdown",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Matty Countdown PWA and Android wrapper",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "android:add": "cap add android",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/core": "^6.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "vite": "^5.4.14"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080914">
+  <meta name="description" content="Matty Countdown — neon futuristic countdown timer.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Matty Countdown</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark">MC</div>
+      <div><div class="brand">MATTY<span> COUNTDOWN</span></div><div class="eyebrow">TIME CONTROL SYSTEM</div></div>
+      <button id="installBtn" class="install hidden" type="button">INSTALL APP</button>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">FOCUS • PRECISION • CONTROL</div>
+      <h1>OWN YOUR<br><span>TIME.</span></h1>
+      <p class="sub">A futuristic countdown experience.</p>
+    </section>
+
+    <section class="timer-card" aria-label="Countdown timer">
+      <div class="timer-top"><span class="live-dot"></span><span id="stateLabel">SYSTEM READY</span><span class="timer-mode">COUNTDOWN</span></div>
+      <div class="dial">
+        <svg viewBox="0 0 300 300" aria-hidden="true">
+          <defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <circle class="track" cx="150" cy="150" r="132"/>
+          <circle id="progress" class="progress" cx="150" cy="150" r="132"/>
+        </svg>
+        <div class="readout">
+          <div id="timeDisplay" class="time">10:00</div>
+          <div class="time-caption">MIN : SEC</div>
+        </div>
+      </div>
+      <div class="status-line"><span id="statusText">READY WHEN YOU ARE</span><span id="percent">100%</span></div>
+    </section>
+
+    <section class="controls">
+      <div class="section-label">SET DURATION</div>
+      <div class="time-inputs">
+        <label>MINUTES<input id="minutes" type="number" min="0" max="999" value="10" inputmode="numeric"></label>
+        <span class="colon">:</span>
+        <label>SECONDS<input id="seconds" type="number" min="0" max="59" value="0" inputmode="numeric"></label>
+      </div>
+      <div class="presets">
+        <button data-seconds="60">01 MIN</button><button data-seconds="300">05 MIN</button>
+        <button data-seconds="600" class="selected">10 MIN</button><button data-seconds="1500">25 MIN</button>
+        <button data-seconds="3600">60 MIN</button>
+      </div>
+      <div class="actions">
+        <button id="startBtn" class="primary">▶ START</button>
+        <button id="pauseBtn" class="secondary">Ⅱ PAUSE</button>
+        <button id="resetBtn" class="secondary">↺ RESET</button>
+      </div>
+      <button id="fullscreenBtn" class="fullscreen">⛶ FULL SCREEN</button>
+      <p id="message" class="message" role="status">Pilih tempoh, kemudian tekan START.</p>
+    </section>
+    <footer>MATTTY COUNTDOWN <span>•</span> BUILT FOR FOCUS</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

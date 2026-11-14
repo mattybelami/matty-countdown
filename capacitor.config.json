@@ -1,0 +1,6 @@
+{
+  "appId": "co.mattybelami.countdown",
+  "appName": "Matty Countdown",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
